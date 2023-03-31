@@ -1,0 +1,136 @@
+body:after {
+  display: none;
+  content: url('resources/buttonOn.png') url('resources/buttonClick.png') url('resources/cursor2.png');
+}
+
+#backgroundVideo {
+  position: fixed;
+  left: 0;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+body {
+  cursor: url(resources/cursor.png),auto;
+}
+@media (max-width: 500px) {
+  #backgroundVideo {
+      display: none;
+      z-index: -1;
+  }
+  body {
+    background: url('resources/staticBackground.png') no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-position-x: 50%;  
+    background-position-y: 10%;
+  }
+}
+.greyArea {
+  z-index: 5;
+
+}
+.center-content {
+  color: black;
+  position: absolute;
+  border: 25px solid transparent;
+  border-image: url(resources/border.jpg) 30 40 30 40 repeat;
+  background: rgba(0, 0, 0, 0.5) url(resources/light.jpg) center;
+
+  z-index: 3;
+  overflow-y: auto;
+  background-clip:content-box;
+
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: 10% auto;
+}
+
+.quest-small {
+  width: 70vw;
+  max-width: 425px;
+  height: 525px;
+  max-height: 75vh;
+}
+
+.quest-big {
+  width: 60vw;
+  max-height: 75vh;
+  height: 525px;
+  min-height: 75px;
+}
+
+.center-content .center-text{
+  text-align: center;
+}
+
+.center-content input {
+  margin: 4px;
+  padding: 4px;
+}
+
+.center-content table, .center-content a , .center-content span {
+  margin-left: 15px;
+}
+
+.blue-button {
+  position: relative;
+  width: 122px;
+  height: 27px;
+  font-size: 18px;
+  border: none;
+  color: rgba(250, 185, 0, 1);
+  margin-left: calc(50% - (122px / 2));
+  top: 30%;
+  background: url(resources/buttonOff.png);
+}
+
+.blue-button:hover {
+  cursor: url(resources/cursor2.png),auto;
+  background: url(resources/buttonOn.png);
+}
+
+.blue-button:active {
+  background: url(resources/buttonClick.png);
+}
+
+.content {
+  cursor: url(resources/cursor.png),auto;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  border: rgba(61,61,61) 1px solid;
+  text-decoration: none;
+  font-size: 17px;
+  background-color: rgba(83, 86, 95, 1);
+}
+
+.topnav a:hover {
+  background-color : rgba(150, 150, 133, 1);
+  color: white;
+}
+
+.topnav a.active {
+  background-color : rgba(150, 150, 133, 1); 
+  color: rgba(250, 185, 0, 1);
+}
+
+input[type="text"],input[type="password"], textarea {
+  background-color : rgba(68, 62, 58, 1);
+  color : rgba(250, 185, 0, 1);
+}
